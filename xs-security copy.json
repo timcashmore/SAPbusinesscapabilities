@@ -1,0 +1,30 @@
+{
+  "xsappname": "capabilities",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.TC_Capabilities",
+      "description": "TC_Capabilities"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "TC_Capabilities",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.TC_Capabilities"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "oauth2-configuration": {
+    "credential-types": [
+        "binding-secret",
+        "x509"
+    ],
+    "redirect-uris": [
+        "https://*.applicationstudio.cloud.sap/**"
+    ]
+}
+}
