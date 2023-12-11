@@ -400,3 +400,19 @@ annotate service.BusinessCapabilities with {
     notes @UI.HiddenFilter;
     sapcapabilityid @UI.Hidden;
 };
+
+annotate service.BusinessCapabilities with {
+    businessarea @(Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'BusinessAreas',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : businessarea,
+                    ValueListProperty : 'businessarea',
+                },
+            ],
+            Label : 'Business Area',
+        },
+        Common.ValueListWithFixedValues : true
+)};
