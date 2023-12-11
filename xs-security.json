@@ -24,7 +24,9 @@
         "x509"
     ],
     "redirect-uris": [
-        "https://*.applicationstudio.cloud.sap/**"
-    ]
+      "https://*.applicationstudio.cloud.sap/**",
+      "https://b31ace8atrial-dev-myhanaapp.cfapps.us10-001.hana.ondemand.com/**",
+      "https://*.hana.ondemand.com/**"
+  ]
 }
 }
