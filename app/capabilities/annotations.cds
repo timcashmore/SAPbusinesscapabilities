@@ -68,7 +68,6 @@ annotate service.BusinessCapabilities with @(
             $Type : 'UI.DataField',
             Value : deployment,
             Label : 'Deployment Platform',
-            ![@UI.Hidden],
         },
         {
             $Type : 'UI.DataField',
@@ -98,7 +97,6 @@ annotate service.BusinessCapabilities with @(
             $Type : 'UI.DataField',
             Value : saplob,
             Label : 'SAP LoB',
-            ![@UI.Hidden],
         },
         {
             $Type : 'UI.DataField',
@@ -115,18 +113,17 @@ annotate service.BusinessCapabilities with @(
             $Type : 'UI.DataField',
             Value : sapproductmetricdetails,
             Label : 'SAP Product Metric Details',
+            ![@UI.Hidden],
         },
         {
             $Type : 'UI.DataField',
             Value : saprecommended,
             Label : 'SAP Recommended Solution',
-            ![@UI.Hidden],
         },
         {
             $Type : 'UI.DataField',
             Value : sapsku,
             Label : 'SAP Product Number',
-            ![@UI.Hidden],
         },
         {
             $Type : 'UI.DataField',

@@ -118,9 +118,6 @@
                                         "DataField::customer": {
                                             "availability": "Hidden"
                                         },
-                                        "DataField::deployment": {
-                                            "availability": "Adaptation"
-                                        },
                                         "DataField::notes": {
                                             "availability": "Hidden"
                                         },
@@ -134,7 +131,7 @@
                                             "availability": "Hidden"
                                         },
                                         "DataField::sapproductmetric": {
-                                            "availability": "Adaptation"
+                                            "availability": "Hidden"
                                         },
                                         "DataField::sapproductmetricdetails": {
                                             "availability": "Hidden"
@@ -168,6 +165,9 @@
                                         },
                                         "DataField::s4core": {
                                             "width": "8rem"
+                                        },
+                                        "DataField::deployment": {
+                                            "availability": "Adaptation"
                                         }
                                     }
                                 }
