@@ -3,7 +3,7 @@ service CapabilityService {
 @requires: 'authenticated-user'
 
 entity Scope as projection on capabilities.Scope;
-
+@odata.draft.enabled
 @requires: 'TC_Capabilities'
 entity BusinessCapabilities as projection on capabilities.BusinessCapabilities;
 

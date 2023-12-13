@@ -1,5 +1,5 @@
 context app.capabilities {
-
+  
   entity  BusinessCapabilities {
     key customer            : String;
     key sapbusinessareaid   : String;
