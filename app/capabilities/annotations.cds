@@ -331,7 +331,7 @@ annotate service.BusinessCapabilities with {
     deployment @Common.Label : 'Deployment Platform';
     s4core @Common.Label : 'S4HANA Core';
     sapbusinessarea @Common.Label : 'SAP Detail Business Area';
-    sapcapability @Common.Text : 'SAP Detail Capability';
+    sapcapability @Common.Label : 'SAP Detail Capability';
     saplob @Common.Label : 'SAP Detail LoB';
     sapproductname @Common.Label : 'SAP Product Name';
     saprecommended @Common.Label : 'SAP Recommended Solution';
