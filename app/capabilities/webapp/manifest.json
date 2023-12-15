@@ -199,17 +199,17 @@
                                         "DataField::notes": {
                                             "formatOptions": {
                                                 "textLinesEdit": "20",
-                                                "textMaxLines" : 10,
+                                                "textMaxLines": 10,
                                                 "textMaxCharactersDisplay": "Infinity"
                                             }
                                         }
-                                     }
+                                    }
                                 }
-                            }                          
+                            }
                         }
                     },
                     "controlAggregation": "midColumnPages",
-                    "contextPattern": "/BusinessCapabilities({key})"                                   
+                    "contextPattern": "/BusinessCapabilities({key})"
                 }
             },
             "config": {

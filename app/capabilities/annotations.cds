@@ -17,7 +17,8 @@ annotate service.BusinessCapabilities with @(
     Visualizations : [
         '@UI.LineItem',
     ]
-    });
+    }
+ );
 
 annotate service.BusinessCapabilities with @(
     UI.LineItem : [
@@ -366,10 +367,6 @@ annotate service.BusinessCapabilities with {
 annotate service.BusinessCapabilities with {
     businessarea @Common.FieldControl : #ReadOnly
 };
-annotate service.BusinessCapabilities with @(
-    UI.Identification : [
-    ]
-);
 annotate service.BusinessCapabilities with @UI : { 
     DeleteHidden : true
 };
@@ -381,3 +378,32 @@ annotate service.BusinessCapabilities with @(
 
 
 
+annotate service.BusinessCapabilities with @(
+    UI.FieldGroup #TestTable : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+        ],
+    }
+);
+annotate service.BusinessCapabilities with @(
+    UI.FieldGroup #Test : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+        ],
+    }
+);
+annotate service.BusinessCapabilities with {
+    businessarea @(Common.ValueList : {
+            $Type : 'Common.ValueListType',
+            CollectionPath : 'BusinessAreas',
+            Parameters : [
+                {
+                    $Type : 'Common.ValueListParameterInOut',
+                    LocalDataProperty : businessarea,
+                    ValueListProperty : 'businessarea',
+                },
+            ],
+            Label : 'Business Area',
+        },
+        Common.ValueListWithFixedValues : true
+)};
