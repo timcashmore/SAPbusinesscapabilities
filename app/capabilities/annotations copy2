@@ -195,7 +195,7 @@ annotate service.BusinessCapabilities with @(
             $Type : 'UI.ReferenceFacet',
             Label : 'SAP Solution Details',
             ID : 'SAPSolutionDetails1',
-            Target : '@UI.FieldGroup#Solution',
+            Target : '@UI.FieldGroup#SAPSolutionDetails',
         },
         {
             $Type : 'UI.ReferenceFacet',
@@ -222,7 +222,7 @@ annotate service.BusinessCapabilities with @(
 
 
 annotate service.BusinessCapabilities with @(
-    UI.FieldGroup #Solution : {
+    UI.FieldGroup #SAPSolutionDetails : {
         $Type : 'UI.FieldGroupType',
         Data : [
             {
@@ -268,7 +268,17 @@ annotate service.BusinessCapabilities with @(
             }],
     }
 );
-
+annotate service.BusinessCapabilities with @(
+    UI.FieldGroup #Notes1 : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Value : notes,
+                Label : 'Notes',
+            },],
+    }
+);
 annotate service.BusinessCapabilities with @(
     UI.HeaderInfo : {
         TypeName : 'capabilityid',
@@ -331,7 +341,7 @@ annotate service.BusinessCapabilities with {
     deployment @Common.Label : 'Deployment Platform';
     s4core @Common.Label : 'S4HANA Core';
     sapbusinessarea @Common.Label : 'SAP Detail Business Area';
-    sapcapability @Common.Text : 'SAP Detail Capability';
+    sapcapability @Common.Label : 'SAP Detail Capability';
     saplob @Common.Label : 'SAP Detail LoB';
     sapproductname @Common.Label : 'SAP Product Name';
     saprecommended @Common.Label : 'SAP Recommended Solution';
@@ -366,18 +376,3 @@ annotate service.BusinessCapabilities with {
 annotate service.BusinessCapabilities with {
     businessarea @Common.FieldControl : #ReadOnly
 };
-annotate service.BusinessCapabilities with @(
-    UI.Identification : [
-    ]
-);
-annotate service.BusinessCapabilities with @UI : { 
-    DeleteHidden : true
-};
-annotate service.BusinessCapabilities with @(
-  Capabilities.InsertRestrictions : {
-    Insertable : false,
-  }
-);
-
-
-
