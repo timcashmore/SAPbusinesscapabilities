@@ -51,7 +51,8 @@
                 "sap.m": {},
                 "sap.ui.core": {},
                 "sap.ushell": {},
-                "sap.fe.templates": {}
+                "sap.fe.templates": {},
+                "sap.f": {}
             }
         },
         "contentDensities": {
@@ -88,12 +89,17 @@
                 {
                     "pattern": ":?query:",
                     "name": "BusinessCapabilitiesList",
-                    "target": "BusinessCapabilitiesList"
+                    "target": [
+                        "BusinessCapabilitiesList"
+                    ]
                 },
                 {
                     "pattern": "BusinessCapabilities({key}):?query:",
                     "name": "BusinessCapabilitiesObjectPage",
-                    "target": "BusinessCapabilitiesObjectPage"
+                    "target": [
+                        "BusinessCapabilitiesList",
+                        "BusinessCapabilitiesObjectPage"
+                    ]
                 }
             ],
             "targets": {
@@ -174,7 +180,9 @@
                             },
                             "initialLoad": "Enabled"
                         }
-                    }
+                    },
+                    "controlAggregation": "beginColumnPages",
+                    "contextPattern": ""
                 },
                 "BusinessCapabilitiesObjectPage": {
                     "type": "Component",
@@ -183,11 +191,40 @@
                     "options": {
                         "settings": {
                             "editableHeaderContent": false,
-                            "contextPath": "/BusinessCapabilities"
+                            "contextPath": "/BusinessCapabilities",
+                            "sectionLayout": "Page",
+                            "controlConfiguration": {
+                                "@com.sap.vocabularies.UI.v1.FieldGroup#Notes": {
+                                    "fields": {
+                                        "DataField::notes": {
+                                            "formatOptions": {
+                                                "textLinesEdit": "20",
+                                                "textMaxLines" : 10,
+                                                "textMaxCharactersDisplay": "Infinity"
+                                            }
+                                        }
+                                     }
+                                }
+                            }                          
                         }
-                    }
+                    },
+                    "controlAggregation": "midColumnPages",
+                    "contextPattern": "/BusinessCapabilities({key})"                                   
                 }
+            },
+            "config": {
+                "flexibleColumnLayout": {
+                    "defaultTwoColumnLayoutType": "TwoColumnsMidExpanded",
+                    "defaultThreeColumnLayoutType": "ThreeColumnsMidExpanded"
+                },
+                "routerClass": "sap.f.routing.Router"
             }
+        },
+        "rootView": {
+            "viewName": "sap.fe.templates.RootContainer.view.Fcl",
+            "type": "XML",
+            "async": true,
+            "id": "appRootView"
         }
     },
     "sap.fiori": {
